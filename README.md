@@ -4,11 +4,15 @@ Simple applications for evaluating mobile application development with cross-pla
 
 The application uses [OpenWeatherMap](https://openweathermap.org/api) API's to fetch and display current and forecast weather data for the current location based on the location information from the device's location services.
 
-The repository contains two projects:
+The repository contains three projects:
 
 ## weather-app-android
 
 Native mobile application for Android written in [Kotlin](https://kotlinlang.org/).
+
+## weather-app-ios
+
+Native mobile application for iOS written in [Swift](https://swift.org/)
 
 ## weather-app-flutter
 
