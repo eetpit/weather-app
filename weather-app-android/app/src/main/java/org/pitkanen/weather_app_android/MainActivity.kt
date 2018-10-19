@@ -1,7 +1,6 @@
 package org.pitkanen.weather_app_android
 
 import android.Manifest
-import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
@@ -9,18 +8,14 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.list_item_row.view.*
 import org.pitkanen.weather_app_android.api.WeatherApi
 import org.pitkanen.weather_app_android.model.Model
+import org.pitkanen.weather_app_android.ui.WeatherItemAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -111,29 +106,5 @@ class MainActivity : AppCompatActivity() {
                 PackageManager.PERMISSION_GRANTED -> getLocation()
             }
         }
-    }
-
-    class WeatherItemAdapter(val context: Context, val items: List<Model.WeatherData>): RecyclerView.Adapter<WeatherItemHolder>() {
-        override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): WeatherItemHolder {
-            return WeatherItemHolder(LayoutInflater.from(context).inflate(R.layout.list_item_row, viewGroup, false))
-        }
-
-        override fun getItemCount(): Int {
-            return items.size
-        }
-
-        override fun onBindViewHolder(holder: WeatherItemHolder, index: Int) {
-            val data = items.get(index)
-            holder.dateText.text = Date(data.dt).toString()
-            Glide.with(context).load("https://openweathermap.org/img/w/"+data.weather?.get(0).icon+".png").into(holder.icon)
-            holder.tempText.text = data.main.temp.toString() + "°C"
-        }
-
-    }
-
-    class WeatherItemHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val dateText = itemView.date_text
-        val icon = itemView.weather_icon
-        val tempText = itemView.temp_text
     }
 }
