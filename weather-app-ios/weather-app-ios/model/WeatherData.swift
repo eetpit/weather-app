@@ -11,7 +11,7 @@ import Foundation
 class WeatherData: Codable {
     let dt: Double
     let main: Main
-    let name: String
+    let name: String?
     let weather: [Weather]
     
     init(dt: Double, main: Main, name: String, weather: [Weather]) {

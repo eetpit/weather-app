@@ -24,7 +24,7 @@
                                 <rect key="frame" x="16" y="367" width="343" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hkL-Dt-2dM" userLabel="TableItemRow" customClass="ListItemViewCell" customModule="weather_app_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListItemViewCell" id="hkL-Dt-2dM" userLabel="ListItemViewCell" customClass="ListItemViewCell" customModule="weather_app_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hkL-Dt-2dM" id="Hne-MC-AIS">
@@ -117,6 +117,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="forecastDataTable" destination="d42-QO-DTy" id="aKF-de-MqU"/>
                         <outlet property="locationName" destination="6Mh-TZ-b9o" id="BoL-I7-O9X"/>
                         <outlet property="temperatureText" destination="QYd-v9-c3p" id="kew-T9-idl"/>
                         <outlet property="weatherDescription" destination="pVE-iR-3x6" id="9Cg-NR-QSI"/>
