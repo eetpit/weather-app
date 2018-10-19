@@ -15,6 +15,9 @@
 /weather-app-android/app/.idea
 /weather-app-android/app/.gradle
 
+# iOS
+*/xcuserdata/*
+
 # Flutter
 /weather-app-flutter/.dart_tool/
 /weather-app-flutter/.packages
