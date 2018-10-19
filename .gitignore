@@ -16,7 +16,10 @@
 /weather-app-android/app/.gradle
 
 # iOS
-*/xcuserdata/*
+/weather-app-ios/Pods/
+weather-app-ios/weather-app-ios.xcworkspace/xcuserdata/
+weather-app-ios/weather-app-ios.xcodeproj/project.xcworkspace/xcuserdata/
+weather-app-ios/weather-app-ios.xcodeproj/xcuserdata/eetu.xcuserdatad/xcschemes/xcschememanagement.plist
 
 # Flutter
 /weather-app-flutter/.dart_tool/

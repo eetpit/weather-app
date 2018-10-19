@@ -1,0 +1,6 @@
+target 'weather-app-ios' do
+  platform :ios, '8.0'
+  use_frameworks!
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+end
