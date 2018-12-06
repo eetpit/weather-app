@@ -104,7 +104,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         let listItem = tableView.dequeueReusableCell(withIdentifier: "ListItemViewCell", for: indexPath) as! ListItemViewCell
         
         let weatherItem = forecastData?[indexPath.row]
-        listItem.dateText.text = "\(Date(timeIntervalSince1970: weatherItem!.dt))"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd, yyyy"
+        
+        listItem.dateText.text = formatter.string(from: Date(timeIntervalSince1970: weatherItem!.dt))
         listItem.icon.sd_setImage(with: URL(string: "https://openweathermap.org/img/w/\(weatherItem!.weather[0].icon).png"))
         listItem.temperature.text = "\(weatherItem!.main.temp) C"
         
