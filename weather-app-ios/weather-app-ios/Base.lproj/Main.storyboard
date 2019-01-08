@@ -17,11 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-qy-fAm" userLabel="WeatherIcon">
-                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-qy-fAm" userLabel="WeatherIcon">
+                                <rect key="frame" x="16" y="60" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QyM-WW-7cy"/>
+                                </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d42-QO-DTy" userLabel="ForecastDataTable">
-                                <rect key="frame" x="16" y="367" width="343" height="280"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d42-QO-DTy" userLabel="ForecastDataTable">
+                                <rect key="frame" x="16" y="406.5" width="343" height="240.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListItemViewCell" id="hkL-Dt-2dM" userLabel="ListItemViewCell" customClass="ListItemViewCell" customModule="weather_app_ios" customModuleProvider="target">
@@ -32,36 +35,34 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPt-sk-2zU" userLabel="ListItemDate">
-                                                    <rect key="frame" x="15" y="11" width="42" height="22"/>
+                                                    <rect key="frame" x="15" y="11" width="99" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eib-td-iv7" userLabel="ListItemIcon">
-                                                    <rect key="frame" x="65" y="11" width="213" height="22"/>
+                                                    <rect key="frame" x="122" y="11" width="99" height="22"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-b7-rbz" userLabel="ListItemTemp">
-                                                    <rect key="frame" x="286" y="11" width="42" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-b7-rbz" userLabel="ListItemTemp">
+                                                    <rect key="frame" x="229" y="11" width="99" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Eib-td-iv7" firstAttribute="leading" secondItem="iPt-sk-2zU" secondAttribute="trailing" constant="8" id="3Cv-i7-oiA"/>
-                                                <constraint firstItem="iPt-sk-2zU" firstAttribute="leading" secondItem="Hne-MC-AIS" secondAttribute="leadingMargin" id="3YE-w5-udS"/>
-                                                <constraint firstItem="Eib-td-iv7" firstAttribute="leading" secondItem="iPt-sk-2zU" secondAttribute="trailing" constant="8" id="48g-T3-oaq"/>
-                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="leading" secondItem="Eib-td-iv7" secondAttribute="trailing" constant="8" id="7LY-Oo-9au"/>
-                                                <constraint firstItem="Eib-td-iv7" firstAttribute="leading" secondItem="iPt-sk-2zU" secondAttribute="trailing" constant="8" id="8kp-dB-xsC"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="iPt-sk-2zU" secondAttribute="bottom" id="9Fh-bN-xXx"/>
-                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="Hwz-9u-A9k"/>
-                                                <constraint firstItem="iPt-sk-2zU" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="KdY-WF-XD2"/>
-                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="trailing" secondItem="Hne-MC-AIS" secondAttribute="trailingMargin" id="Ohy-Re-O0u"/>
-                                                <constraint firstItem="Eib-td-iv7" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="Q1c-Mm-gJa"/>
-                                                <constraint firstItem="Eib-td-iv7" firstAttribute="bottom" secondItem="Hne-MC-AIS" secondAttribute="bottomMargin" id="Rqs-pe-ork"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qtK-b7-rbz" secondAttribute="bottom" id="Vy1-tH-kb8"/>
-                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="leading" secondItem="Eib-td-iv7" secondAttribute="trailing" constant="8" id="pB9-no-PfP"/>
-                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="leading" secondItem="Eib-td-iv7" secondAttribute="trailing" constant="8" id="zpc-kH-OdJ"/>
+                                                <constraint firstItem="Eib-td-iv7" firstAttribute="width" secondItem="iPt-sk-2zU" secondAttribute="width" id="7EY-BN-lvl"/>
+                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="trailing" secondItem="Hne-MC-AIS" secondAttribute="trailingMargin" id="EtW-Gu-jn0"/>
+                                                <constraint firstItem="iPt-sk-2zU" firstAttribute="leading" secondItem="Hne-MC-AIS" secondAttribute="leadingMargin" id="HJE-Oj-EU4"/>
+                                                <constraint firstItem="iPt-sk-2zU" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="K5O-j0-t4q"/>
+                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="Sc1-i9-bDZ"/>
+                                                <constraint firstItem="Eib-td-iv7" firstAttribute="bottom" secondItem="Hne-MC-AIS" secondAttribute="bottomMargin" id="Smf-dZ-qPd"/>
+                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="leading" secondItem="Eib-td-iv7" secondAttribute="trailing" constant="8" id="c1h-N1-pvm"/>
+                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="bottom" secondItem="Hne-MC-AIS" secondAttribute="bottomMargin" id="ep6-xF-2HJ"/>
+                                                <constraint firstItem="Eib-td-iv7" firstAttribute="leading" secondItem="iPt-sk-2zU" secondAttribute="trailing" constant="8" id="hwu-9I-aie"/>
+                                                <constraint firstItem="iPt-sk-2zU" firstAttribute="bottom" secondItem="Hne-MC-AIS" secondAttribute="bottomMargin" id="nyX-YZ-gxf"/>
+                                                <constraint firstItem="Eib-td-iv7" firstAttribute="top" secondItem="Hne-MC-AIS" secondAttribute="topMargin" id="s1h-jt-j6R"/>
+                                                <constraint firstItem="qtK-b7-rbz" firstAttribute="width" secondItem="iPt-sk-2zU" secondAttribute="width" id="yIz-Hm-PlU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -72,8 +73,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2Hb-EQ-skI">
-                                <rect key="frame" x="20" y="156" width="335" height="202.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2Hb-EQ-skI">
+                                <rect key="frame" x="20" y="196" width="335" height="202.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVE-iR-3x6" userLabel="WeatherDescription">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
